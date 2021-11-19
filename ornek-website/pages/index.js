@@ -11,7 +11,7 @@ function HomePage({ characters }) {
 			<Head>
 				<title>Home </title>
 			</Head>
-			<h1> The Rick And</h1>
+			<h1> The Rick And Morty</h1>
 
 			<style jsx>
 				{`
