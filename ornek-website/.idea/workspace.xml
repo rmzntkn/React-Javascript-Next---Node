@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ac07123-5fa3-4a61-b54e-a5fb08a60725" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rewiew/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rewiew/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="4ac07123-5fa3-4a61-b54e-a5fb08a60725" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636754055197</updated>
       <workItem from="1636754056296" duration="1066000" />
+      <workItem from="1637609466014" duration="118000" />
     </task>
     <servers />
   </component>
@@ -62,5 +60,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
