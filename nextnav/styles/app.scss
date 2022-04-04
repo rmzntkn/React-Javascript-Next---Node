@@ -1,0 +1,35 @@
+@import "core/reset";
+
+body {
+	font-family: Poppins, sans-serif;
+	text-rendering: optimizeLegibility;
+	background-color: white;
+	color: var(--font-color);
+}
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.container {
+	@media (min-width: 325px) {
+		max-width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 768px;
+	}
+
+	@media (min-width: 1024px) {
+		max-width: 1024px;
+	}
+
+	@media (min-width: 1140px) {
+		max-width: 1200px;
+	}
+}
