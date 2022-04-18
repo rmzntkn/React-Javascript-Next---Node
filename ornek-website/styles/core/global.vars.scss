@@ -1,0 +1,30 @@
+:root {
+	--bg-color: #f5f6fa;
+	--font-color: #526a72;
+	--font-color-transparent: #526a726c;
+	--body-light: white;
+	--border-color: #dcdcdc;
+	--logo: url(/public/logo.svg);
+	--blue: #3bacf3;
+	--bg-grey-color: #fbfcff;
+
+	--hint-info-color: #3bacf3;
+	--hint-danger-color: #721c24;
+	--hint-warning-color: #856404;
+	--hint-success-color: #4c8948;
+
+	--hint-info-bg: #f5f6fa;
+	--hint-danger-bg: #f8d7da;
+	--hint-warning-bg: #fff3cd;
+	--hint-success-bg: #f1fff0;
+
+	--hint-info-border: #3bacf3;
+	--hint-danger-border: #f5c6cb;
+	--hint-warning-border: #ffeeba;
+	--hint-success-border: #e4ffe2;
+
+	--hint-info-bg-image: url("/hint-info.svg");
+	--hint-danger-bg-image: url("/hint-danger.svg");
+	--hint-warning-bg-image: url("/hint-warning.svg");
+	--hint-success-bg-image: url("/hint-success.svg");
+}

@@ -9,13 +9,14 @@ import styles from "../styles/components/layout.module.scss";
 
 import { useState } from "react";
 
-export const Layout = ({ characters }) => {
+export const Layout = ({ simpson, section }) => {
 	const [click, setClick] = useState(false);
 	const handleClick = () => setClick(!click);
 	const closeMobileMenu = () => setClick(false);
 
 	return (
 		<div>
+			{/* <div>{simpson.characters.results.map((character) => character.name)}</div> */}
 			<header className={styles.header}>
 				<div className={styles.navbar}>
 					<div>
@@ -27,13 +28,6 @@ export const Layout = ({ characters }) => {
 						/>
 					</div>
 
-					{/* <div
-						className={
-							click
-								? styles.nav_items
-								: styles.nav_items && styles.nav_items.active
-						}
-					> */}
 					<div
 						className={
 							!click
@@ -49,9 +43,35 @@ export const Layout = ({ characters }) => {
 
 								<div className={styles.drop_list}>
 									<div className={styles.dropbox}>
-										{/* <Link href="/">
-											<a>Clean Water</a>
-										</Link>
+										{section === "main" ? (
+											<div>
+												{simpson.results.map((character) => (
+													<Link
+														href={"/posts/" + character.id}
+														key={character.id}
+													>
+														<a>
+															<h3>{character.name}</h3>
+														</a>
+													</Link>
+												))}
+											</div>
+										) : undefined}
+
+										{section === "about" ? (
+											<div>
+												{simpson.results.map((character) => (
+													<Link
+														href={"/posts/" + character.id}
+														key={character.id}
+													>
+														<a>
+															<h3>{character.id}</h3>
+														</a>
+													</Link>
+												))}
+											</div>
+										) : undefined}
 										<Link href="/">
 											<a>Education</a>
 										</Link>
@@ -63,7 +83,7 @@ export const Layout = ({ characters }) => {
 										</Link>
 										<Link href="/">
 											<a>Refugee</a>
-										</Link> */}
+										</Link>
 									</div>
 								</div>
 							</li>
@@ -88,8 +108,23 @@ export const Layout = ({ characters }) => {
 						</ul>
 					</div>
 					<div className={styles.navright}>
-						<div onClick={handleClick}>
-							<FontAwesomeIcon icon={click ? faTimes : faBars} />
+						{/* <div
+							className={
+								click ? styles.hamburger_icon : styles.hamburger_icon_changed
+							}
+							onClick={() => click(!click)}
+						> */}
+						<div
+							className={
+								!click
+									? `${styles.hamburger_icon}`
+									: `${styles.hamburger_icon} ${styles.hamburger_icon_changed}`
+							}
+							onClick={handleClick}
+						>
+							<div className={styles.bar1}></div>
+							<div className={styles.bar2}></div>
+							<div className={styles.bar3}></div>
 						</div>
 					</div>
 				</div>

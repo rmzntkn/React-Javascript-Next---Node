@@ -1,0 +1,131 @@
+.header {
+	border-bottom: 1px solid #e2e8f0;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.5rem;
+}
+
+.hamburger {
+	display: none;
+}
+
+.bar {
+	display: block;
+	width: 35px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #222222;
+}
+
+.navmenu {
+	display: flex;
+	align-items: center;
+}
+
+.navitem {
+	color: var(--font-color);
+	padding-top: 0px;
+	padding-right: 20px;
+	cursor: pointer;
+	position: relative;
+}
+
+.navlink {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: #0e436e;
+}
+.navbutton {
+	height: 40px;
+	padding: 0 40px;
+	color: #0e436e;
+	border-radius: 4px;
+	border: 1px solid #0e436e;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	margin-left: 5rem;
+}
+
+.navlink:hover {
+	color: #482ff7;
+	text-decoration-line: underline;
+}
+
+.navlogo {
+	font-size: 2.1rem;
+	font-weight: 500;
+	color: #482ff7;
+}
+@media (min-width: 1600px) {
+	.header {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 1200px) {
+	.header {
+		max-width: 1140px;
+	}
+}
+@media (max-width: 1024px) {
+	.header {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.navmenu {
+		position: fixed;
+		left: -100%;
+		top: 5rem;
+		flex-direction: column;
+		background-color: #fff;
+		width: 100%;
+		border-radius: 10px;
+		text-align: center;
+		transition: 0.3s;
+		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+	}
+
+	.navmenu.active {
+		left: 0;
+	}
+
+	.navitem {
+		margin: 2.5rem 0;
+	}
+
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+		-webkit-transform: translateY(8px) rotate(45deg);
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		-webkit-transform: translateY(-8px) rotate(-45deg);
+		transform: translateY(-8px) rotate(-45deg);
+	}
+}
+
+.footer {
+	font-size: 1.5rem;
+}

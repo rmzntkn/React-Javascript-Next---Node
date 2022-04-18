@@ -1,0 +1,84 @@
+@import "../core/settings.scss";
+
+.product_boxes {
+	background-color: #fbfcff;
+
+	.products {
+		display: flex;
+		flex-direction: reverse;
+
+		.mobie_design {
+			width: 50%;
+		}
+		.management {
+			display: flex;
+			width: 50%;
+			flex-direction: column;
+			padding-top: 70px;
+
+			img {
+				width: 50%;
+				margin-bottom: 100px;
+			}
+			span {
+				font-size: 27px;
+			}
+
+			h4 {
+				font-weight: 600;
+				font-size: 30px;
+				line-height: 40px;
+				color: #2a3654;
+			}
+			p {
+				font-size: 14px;
+				line-height: 21px;
+				color: #2a3654;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			a {
+				background-color: #35cfb1;
+				border-radius: 8px;
+				padding: 14px 40px;
+				color: white;
+				display: inline-flex;
+				max-width: 120px;
+				justify-content: center;
+				font-weight: 600;
+				margin-top: 5px;
+			}
+		}
+
+		@media (min-width: $xs) and (max-width: $sm) {
+			flex-direction: column-reverse;
+
+			.management {
+				width: 100%;
+				padding-top: 0;
+				text-align: center;
+				justify-content: center;
+				display: flex;
+
+				img {
+					width: 80%;
+					height: auto;
+					margin: auto;
+					// margin-left: auto;
+					// margin-right: auto;
+				}
+
+				h4 {
+					justify-content: center;
+					margin-bottom: 30px;
+					margin-top: 30px;
+				}
+				a {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+}

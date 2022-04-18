@@ -1,0 +1,52 @@
+@import "core/reset";
+@import "core/settings";
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: var(--font-color);
+	overflow-x: hidden;
+}
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.container {
+	@media (min-width: $xs) {
+		max-width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	@media (min-width: $sm) {
+		max-width: $sm;
+	}
+
+	@media (min-width: $md) {
+		max-width: $md;
+	}
+
+	@media (min-width: $lg) {
+		max-width: 1140px;
+	}
+
+	@media (min-width: $xlg) {
+		max-width: 1140px;
+	}
+}
+
+@media (min-width: $xs) and (max-width: $sm) {
+	.keen-slider,
+	.keen-slider__slide {
+		overflow: initial !important;
+	}
+}

@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
+    "gray": "0.0.6",
     "gray-matter": "^4.0.3",
+    "matter": "^0.2.0",
     "next": "latest",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^7.2.3",

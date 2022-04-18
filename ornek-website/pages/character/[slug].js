@@ -1,29 +1,30 @@
 import Layout from "../../components/layout";
-import { useRouter } from "next/router";
 import Head from "next/head";
-import fetch from "isomorphic-unfetch";
-import Link from "next/link";
+import unfetch from "isomorphic-unfetch";
 import slug from "slug";
 
 function CharacterDetail({ character }) {
 	return (
 		<Layout>
 			<Head>
-				<title>Home </title>
+				<title>Ana sayfa</title>
 			</Head>
-			<h1>{character.name} </h1>
-			<figure>
-				<img src={character.image} alt={character.name} />
-			</figure>
+
+			<h1>{character.PageTitle}</h1>
+			<h2>{character.TOOL} TOOL</h2>
 		</Layout>
 	);
 }
+
 export async function getStaticPaths() {
-	const data = await fetch("https://rickandmortyapi.com/api/character");
+	const data = await unfetch("https://mweb-api.circleboom.com/landing-pages/");
 	const characters = await data.json();
-	const paths = characters.results.map((character) => {
-		return { params: { slug: `${slug(character.name)}-${character.id}` } };
+	console.log(characters);
+
+	const paths = characters.map((character) => {
+		return { params: { slug: `${slug(character.PageTitle)}-${character.id}` } };
 	});
+
 	return {
 		paths,
 		fallback: false,
@@ -31,15 +32,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	console.log(params.slug);
 	const id = params.slug.split("-").slice(-1)[0];
-	const data = await fetch("https://rickandmortyapi.com/api/character/" + id);
+	const data = await unfetch(
+		"https://mweb-api.circleboom.com/landing-pages/" + id
+	);
 	const character = await data.json();
 
 	return {
 		props: {
 			character,
-		}, // will be passed to the page component as props
+		},
 	};
 }
 

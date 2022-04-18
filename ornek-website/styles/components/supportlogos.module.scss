@@ -1,0 +1,27 @@
+@import "core/settings";
+
+.support {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 1.25rem;
+    span {
+        font-weight: 500;
+        padding-right: 10px;
+    }
+    img {
+        margin-right: 10px;
+    }
+    &_content {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    div {
+        display: flex;
+    }
+
+    @media (min-width: $xs) and (max-width: $sm) {
+        justify-content: center;
+    }
+}
